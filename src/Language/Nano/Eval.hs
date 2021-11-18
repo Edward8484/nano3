@@ -170,7 +170,7 @@ eval :: Env -> Expr -> Value
 eval ev ENil = VNil
 eval ev (EBool x) = VBool x
 eval ev (EInt x) = VInt x
-eval ev (EVar x) = lookupId x
+eval ev (EVar x) = lookupId x ev
 
 --------------------------------------------------------------------------------
 evalOp :: Binop -> Value -> Value -> Value
